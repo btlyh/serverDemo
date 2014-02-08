@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objects>
+	<!--
+	全局配置表
+
+	-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setLevelExp">
+			<ints>12,13,14,14,15,17,20,22,25,30,35,41,48,56,65,76,88,102,117,134,153,174,197,222,250,278,310,346,386,426,470,516,568,622,680,742,806,876,952,1030,1112,1200,1294,1392,1494,1604,1716,1836,1962,2100,2240,2380,2520,2680,2860,3020,3200,3380,3580,3780,4000,4220,4440,4680,4920,5180,5440,5720,6000,6300,6600,6920,7240,7580,7920,8280,8660,9040,9440,9840,10260,10680,11140,11600,12060,12540,13040,13560,14080</ints>
+		</method>
+	</obj>
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setDoubleSkill">
+			<string>19412,19552;19451,19552;19414,19601;19651,19501,19601;19452,19553;19652,19852,19553;19751,19602;19503,19554,19602;19502,19801,19554,19602;19421,19555;19603,19419,19555;19752,19420,19415,19419,19555</string>
+		</method>
+	</obj>
+	<!-- 土豪培养系数 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setForsterLockPer">2</method>
+	</obj>
+	<!-- 土豪培养花费 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setGoldFosterNum">50</method>
+	</obj>
+	<!-- 金币培养 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setMoneyFosterNum">20</method>
+	</obj>
+	<!-- 普通培养 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setNormalFosterNum">30</method>
+	</obj>
+	<!-- 在线领奖等待时间 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setRewardIntervalTime">
+			<ints>30,60,90,120</ints>
+		</method>
+	</obj>
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setRewardSampleId">
+			<ints>21657,21658,21659,21660</ints>
+		</method>
+	</obj>
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEveryDayRewardNum">4</method>
+	</obj>
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setCardBeyongNum">
+			<ints>30,2,50,3,70,4,80,5</ints>
+		</method>
+	</obj>
+	<!-- 设置排位赛挑战胜利获得的积分 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setDuelWinPoint">10</method>
+	</obj>
+	<!-- 设置排位赛挑战对手的排名差值（从大到小，例子：1000，10（意思是如果玩家排名大于1000名那对手就依次比他高10个名次）） -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setDuel">
+		<ints>1000,10,500,5,100,3,50,2,6,1</ints>
+		</method>
+	</obj>
+	<!-- 设置排位赛挑显示的对手数量 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setDuelCount">6</method>
+	</obj>
+	<!-- 设置排位赛挑战失败获得的积分 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setDuelLosePoint">5</method>
+	</obj>
+	<!-- 设置相应排位赛等级每日领取的积分 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setDayPoint">
+			<ints>1000,500,400,300,280,260,240,220,210,200,195,190,185,180,175,170,165,160,155,150,145,140,135,130,125,120,115,110,105,100,97,94,91,88,85,82,79,76,73,70,67,64,61,58,55,52,49,46,43,40,30</ints>
+		</method>
+	</obj>
+	<!-- 设置世界BOSS的SID-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setGlobalBossList">
+			<ints>20422</ints>
+		</method>
+	</obj>
+	<!-- 设置当壕功能随机抽取敌人战力的误差值-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setErrorValue">100</method>
+	</obj>
+	<!-- 设置当壕功能敌人列表上限-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEnemySize">20</method>
+	</obj>
+	<!-- 设置当壕功能随机匹配敌人的次数-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setMatchTimes">5</method>
+	</obj>
+	<!-- 设置当壕功能的马仔人数上限-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSlaveConfine">6</method>
+	</obj>
+	<!-- 当壕功能信息数量上限-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setInformationSize">20</method>
+	</obj>
+	<!-- 设置当壕功能攻击次数上限-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setAttConfine">5</method>
+	</obj>
+	<!-- 设置当壕功能反抗次数上限-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setReactConfine">5</method>
+	</obj>
+	<!-- 设置当壕功能赎身价格-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setGetFreeGold">100</method>
+	</obj>
+	<!-- 设置当壕功能救人次数限制-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSaveConfine">5</method>
+	</obj>
+	<!-- 设置当壕功能救陌生人人次数限制-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSaveNorConfine">5</method>
+	</obj>
+	<!-- 设置当壕功能办事所需时间(分钟)-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setWorkTime">3</method>
+	</obj>
+	<!-- 设置当壕功能办事次数上限-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setWorkConfine">50</method>
+	</obj>
+	<!-- 设置当壕功能托管所需金币数量-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setManagedGold">100</method>
+	</obj>
+	<!-- 设置当壕功能速去速回所需金币数量-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setFastWorkGold">1</method>
+	</obj>
+	<!-- 设置当壕功能求救次数-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setHelpConfine">5</method>
+	</obj>
+	<!-- 设置世界BOSS自动报名所需金币-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setBossAutoSignGold">1000</method>
+	</obj>
+	<!-- 设置技能刷新所需金币数量-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSkillFlushNeedGold">20</method>
+	</obj>
+	<!-- 设置玩家初始化可挑战副本SID-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setIndexForNormalNPC">11001</method>
+	</obj>
+	<!-- 设置VIP配置-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setVipCfgXml">
+			<ints>21372,21373,21374,21375,21376,21377,21378,21379,21380,21381,21382</ints>
+		</method>
+	</obj>
+	<!--VIP升级所需要的GOLD-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setVipLevelGold">
+			<ints>100,200,500,1000,2000,5000,10000,20000,50000,100000</ints>
+		</method>
+	</obj>
+	<!--卡牌吞噬消耗的基础银币-->
+
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEngulfCardMony">
+			30
+		</method>
+	</obj>
+	
+		<!--新手引导的卡牌奖励-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setLeadAwardCard">
+			<ints>1,10218,10218</ints>
+		</method>
+	</obj>
+	
+	<!--卡牌被吞噬所能提供的经验  不同等级-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEngulfLevelExp">
+			<ints>16,18,21,24,27,30,33,37,41,46,52,59,68,77,88,101,117,134,155,178,205,235,270,310,354,404,460,522,591,668,753,847,950,1064,1188,1324,1473,1634,1809,2000,2206,2428,2668,2927,3205,3504,3825,4168,4535,4928,5348,5796,6272,6776,7312,7884,8488,9128,9804,10520,11276,12076,12920,13808,14744,15728,16764,17852,18996,20196,21456,22776,24160,25608,27124,28708,30364,32096,33904,35792,37760,39812,41948,44176,46496,48908,51416,54024,56736,59552</ints>
+		</method>
+	</obj>
+	
+		<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEngulfExpPer">1</method>
+	</obj>
+	<!-- 服务器刷新时间（24小时，同世界BOSS时间） -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setServerTime">5</method>
+	</obj>
+	<!-- 当壕信息SID集合 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSlaveInformations"><ints>50001,50002,50003,50004,50005,50006,50007,50008,50009,50010,50011,50012,50013,50014,50015,50016,50017,50018,50019,50020,50021,50022,50023,50024,50025,50026,50027,50028,50029,50030,50031,50032,50033,50034,50035,50036,50037,50038,50039,50040,50041,50042</ints></method>
+	</obj>
+		<!-- 当壕身份维持时间 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSlaveKeepTime">7</method>
+	</obj>
+	<!-- 卡牌最高等级-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setMaxlevel">90</method>
+	</obj>
+
+	<!-- 日常任务可领取数量-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setCanTakeDaylyCount">3</method>
+	</obj>
+
+	<!-- 日常任务从多少个任务里面随机取-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setRandomDaylyCount">10</method>
+	</obj>
+	<!-- 至少抽取多少次过后才有机会抽取橙卡-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setOrangeGetMinIndex">6</method>
+	</obj>
+	<!--  至少抽取多少次过后才有机会抽取紫卡-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setVioletGetMinIndex">6</method>
+	</obj>
+		<!--  各色卡牌概率-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSkillWeightByType">
+		<ints>5000,4000,3000,2000,1000</ints>
+		</method>
+	</obj>
+	
+	<!-- 当壕功能路见不平和救好友奖励-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setSlaveAward">
+		100
+		</method>
+	</obj>
+	
+	<!-- 当壕功能办事收益系数（所填值为整数，程序会除以1000）-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setWorkFactor">
+		48
+		</method>
+	</obj>
+	
+	<!--商店卡牌包 开启各种颜色卡牌的几率-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setShopCardTypeWeight">
+		<ints>5000,4000,3000,500,100</ints>
+		</method>
+	</obj>
+	
+	<!--随机抽奖卡牌的ID  起止值-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setShopCardIdStartEnd">
+		<ints>10001,10224</ints>
+		</method>
+	</obj>
+	
+	<!--可雇佣卡牌ID  起止值-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEmployCardIdStartEnd">
+		<ints>10001,10224</ints>
+		</method>
+	</obj>
+	
+	<!--不同的VIP 每日雇佣 战斗的次数-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEmployNumByVipLevel">
+		<ints>5,6,7,7,8,8,9,9,9,10,11</ints>
+		</method>
+	</obj>
+	
+	<!-- 购买雇佣次数的基础价格-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setBuyBaseEmployNumPrice">
+		100
+		</method>
+	</obj>
+	
+	
+		<!-- 雇佣系统卡牌的基础价格-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setEmploySysPrice">
+		100
+		</method>
+	</obj>
+	
+	
+	<!-- 世界BOSS攻击加强百分比（例如：写1是增加%1，写100是增加%100） -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setBossAttUp">5</method>
+	</obj>
+
+	<!-- 军帐属性刷新时间（分钟） -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampTime">5</method>
+	</obj>
+
+	<!-- 卡牌训练上限值对应自身基础属性的比值 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampMaxValue">2</method>
+	</obj>
+
+	<!-- 军帐训练增加属性的百分比，写10就是10%，20就是20% -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampIncr">2</method>
+	</obj>
+
+	<!-- 军帐训练方式增加成功率的值,同上 10是10% 顺序为土豪，金币，银币 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampChance">
+		<ints>20,10,0</ints>
+		</method>
+	</obj>
+	<!-- 军帐训练方式的价格 顺序为土豪，金币，银币 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampPrice">
+		<ints>50,20,3000</ints>
+		</method>
+	</obj>
+
+	<!-- 军帐训练方式增加属性的倍率，顺序为土豪，金币，银币 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampRide">
+		<ints>1,1,1</ints>
+		</method>
+	</obj>
+
+	<!-- 军帐手动刷新的价格 -->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setArmyCampRefreshPrice">50</method>
+	</obj>
+	
+	<!--不同的VIP 购买每日雇佣的倍率-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setBuyEmployNumBasePer">
+		<ints>100,90,85,80,75,70,65,60,55,50,45</ints>
+		</method>
+	</obj>
+	
+	<!--商店卡牌包 开启各种颜色卡牌的几率-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setShopCardTypeWeight">
+		<ints>5000,4000,3000,500,100</ints>
+		</method>
+	</obj>
+	
+	<!--随机抽奖卡牌的ID  起止值-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setShopCardIdStartEnd">
+		<ints>10001,10224</ints>
+		</method>
+	</obj>
+	
+	<!--好友推荐 筛选 战斗力的 开始和结束的值 如  90%-130%   就填 90(开始)  130(结束)-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setChooseFriendsFightPointSE">
+		<ints>90,130</ints>
+	</method>
+	</obj>
+
+	<!--好友推荐 筛选人物 范围基数  上面的范围筛选不到预定的值  以这个基数向两边扩展   如 以前是 90%-130%  假设这个值是10  那么 就变成  80%-140%-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setChooseFriendsBaseFinghtPoint">
+		10
+	</method>
+	</obj>
+
+	<!--每次筛选的好友个数-->
+	<obj class="com.cambrian.dfhm.back.GameCFG">
+		<method name="setChooseFriendNum">
+		5
+	</method>
+	</obj>
+</objects>

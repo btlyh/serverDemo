@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- mongoDB -->
+	<obj class="com.cambrian.common.db.MongoDB" id="mongo">
+		<method name="setHost">127.0.0.1</method>
+		<method name="setPorts"><ints>27017</ints></method>
+		<method name="setDatabase">backDB</method>
+		<method name="setUser">root</method>
+		<method name="setPassword">root</method>
+		<method name="init"/>
+	</obj>
+</objects>

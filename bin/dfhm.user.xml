@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+
+<!-- 设置超时时间
+<method ref="manager" name="setTimeout" modify="set" modifyText="设置数据服务管理器的超时">1200000</method> -->
+<!-- 设置数据中心管理器的保存时间
+<method ref="manager" name="setSaveTimeout" modify="set" modifyText="设置数据服务管理器的超时">6000</method> -->
+
+<method ref="DS" name="getAttributes" id="_states"/>
+<!-- 设置服务器名称 -->
+<method ref="_states" name="set" modify="set"><string>serverName</string><string modifyText="设置服务器名称">成都</string></method>
+<!-- 设置服务器最大人数 -->
+<method ref="DS" name="setSessionAmount">3000</method>
+
+</objects>

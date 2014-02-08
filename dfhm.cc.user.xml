@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+
+<!-- ########################################## -->
+<!-- 设置认证中心管理器的超时 -->
+<method ref="CC" name="setTimeout" modify="set" modifyText="设置认证中心管理器的超时">3500000</method>
+<!-- 设置服务器名称 -->
+<!-- <method ref="attributes" name="set" modify="set"><string>serverName</string><string modifyText="设置服务器名称">用户中心</string></method> -->
+
+</objects>

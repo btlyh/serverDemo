@@ -1,0 +1,5 @@
+导入命令：
+	在CMD下：mongorestore -d dataBaseName(新建数据库或者现有数据库的名称) 数据文件夹的路径
+	例如：mongorestore -d ABCD d:mongo/backDB
+
+

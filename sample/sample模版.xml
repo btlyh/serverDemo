@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objects>
+	<!--
+	sid	唯一标签
+	class	程序使用
+	getToken;	/** 每日免费领取军令数量 */
+	buyToken;	/** 每日可购买军令数量 */
+	skillFlushFreeTimes;	/** 每日刷新技能免费次数 */
+	buySlaveAttTimes;/** 每日购买当壕挑战次数 */
+	buySaveNorTimes;/** 每日购买路见不平次数 */
+	buySaveHelpTimes;	/** 每日购买好友求助次数 */
+	buyReactTimes;	/** 每日购买反抗次数 */
+	buyRansomTimes;	/** 每日购买赎身次数 */
+	buyDuelTimes;	/** 每日购买竞技场挑战次数 */
+	功能：0表示没有，1表示有
+	cardRichForster;	/** 卡牌土豪培养功能 */
+	richTrain;	/** 土豪训练功能 */
+	battleSkip;	/** 战斗中使用跳过功能 */
+	autoBossFight;	/** 世界BOSS自动战斗 */
+	autoBossSign;	/** 世界BOSS自动报名 */
+	slaveManaged;	/** 打土豪托管功能 */
+	-->
+	<sample sid="21372" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="0" buyToken="20" skillFlushFreeTimes="0" buySlaveAttTimes="3" buySaveNorTimes="3" buySaveHelpTimes="3" buyReactTimes="3" buyRansomTimes="3" buyDuelTimes="5" richTrain="0" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="0" slaveManaged="0"/>
+	<sample sid="21373" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="2" buyToken="40" skillFlushFreeTimes="0" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="10" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="0" slaveManaged="1"/>
+	<sample sid="21374" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="4" buyToken="60" skillFlushFreeTimes="0" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="10" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="0" slaveManaged="1"/>
+	<sample sid="21375" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="6" buyToken="80" skillFlushFreeTimes="1" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="10" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="0" slaveManaged="1"/>
+	<sample sid="21376" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="8" buyToken="100" skillFlushFreeTimes="2" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="10" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+	<sample sid="21377" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="10" buyToken="120" skillFlushFreeTimes="3" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="10" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+	<sample sid="21378" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="10" buyToken="140" skillFlushFreeTimes="4" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="15" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+	<sample sid="21379" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="10" buyToken="180" skillFlushFreeTimes="5" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="15" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+	<sample sid="21380" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="10" buyToken="220" skillFlushFreeTimes="5" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="15" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+	<sample sid="21381" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="10" buyToken="260" skillFlushFreeTimes="5" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="20" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+	<sample sid="21382" class="com.cambrian.dfhm.common.entity.VipCfg" getToken="10" buyToken="300" skillFlushFreeTimes="5" buySlaveAttTimes="6" buySaveNorTimes="6" buySaveHelpTimes="6" buyReactTimes="6" buyRansomTimes="6" buyDuelTimes="20" richTrain="1" cardRichForster="1" battleSkip="1" autoBossFight="1" autoBossSign="1" slaveManaged="1"/>
+
+</objects>

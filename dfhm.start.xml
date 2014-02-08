@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+
+<!-- 安装名字检测器-->
+	<obj class="com.cambrian.game.ds.CheckNameFilter" id="cnf">
+		<method name="loadFilter"></method>
+		<method name="loadMingZi"></method>
+	</obj>
+	<!-- 认证中心地址 -->
+	<constructor id="ccURL" class="com.cambrian.common.net.URL"><ref id="ds_cc_address"/></constructor>
+	<!-- 创建无阻塞的连接提供器 -->
+	<obj class="com.cambrian.common.net.ConnectProducer" id="cc.cp">
+		<method name="setURL"><ref id="ccURL"/></method>
+		<method name="timerStart"/>
+	</obj>
+	<!-- 创建数据服务管理器 -->
+	<obj class="com.cambrian.game.ds.DataServer" id="DS">
+		<!-- 安装认证访问接口 -->
+		<method name="setDSCCAccess">
+			<obj class="com.cambrian.game.ds.DirectDSCCAccess" id="dscaccess">
+				<method name="setConnectProducer"><ref id="cc.cp"/></method>
+			</obj>
+		</method>
+		<!-- 安装数据访问接口 -->
+		<method name="setDBAccess">
+			<obj class="com.cambrian.dfhm.ds.GameDSAccess" id="gameDSAccess">
+				<!-- TODO数据库访问配置 -->
+				<method name="setMongoDB"><ref id="mongo"/></method>
+				<method name="setCheckNameFilter"><ref id="cnf"/></method>
+			</obj>
+		</method>
+		<method name="setDCRW"><obj class="com.cambrian.game.util.PlayerDCRW"/></method>
+		<method name="setUserWriter"><obj class="com.cambrian.game.util.PlayerWriter"/></method>
+		<method name="setCheckNameFilter"><ref id="cnf"/></method>
+		<!-- 注册状态改变事件处理监听器 -->
+		<method name="addListener"><obj class="com.cambrian.game.ds.DSChangeAdapter"/></method>
+		<!-- 定时器开始工作 -->
+		<method name="timerStart"/>
+	</obj>
+
+	<!-- 安装随机取名服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.dfhm.GlobalConst" name="RANDOMNAME_PORT"/>
+		<obj class="com.cambrian.game.ds.GetRandomNameCommand">
+			<method name="setDS"><ref id="DS"/></method>
+		</obj>
+	</method>
+	<!-- 设置属性服务
+	<method ref="manager" name="getAttributes" id="attributes"/>
+	<method name="getPort" ref="service" id="__port"><field class="com.cambrian.common.net.ProxyDataHandler" name="ATTRIBUTE_PORT"/></method>
+	<method name="setAttributes" ref="__port"><ref id="attributes"/></method> -->
+
+	<!-- 通信-发送信息代理器 -->
+	<field class="com.cambrian.dfhm.ProxySendCommand" name="proxy" id="proxySendCommand"/>
+	<!-- 角色模式-功能处理分发器 -->
+	<field class="com.cambrian.common.actor.ProxyActorProcess" name="proxy" id="proxyActorProcess"/>
+
+	<!-- ########################################## -->
+
+	<!-- 安装认证代理服务
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CERTIFY_PROXY_PORT"/>
+		<obj class="youkia.back.ds.CertifyProxyPort">
+			<method name="setConnectProducer"><ref id="cc.nbcp"/></method>
+			<method name="setPort"><field class="zmyth.net.PortService" name="CC_CERTIFY_PORT"/></method>
+		</obj>
+	</method> -->
+	<!-- 安装登陆服务
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.dfhm.GlobalConst" name="LOGIN_PORT"/>
+		<obj class="com.cambrian.game.ds.LoginCommand">
+			<method name="setDS"><ref id="DS"/></method>
+		</obj>
+	</method> -->
+	<!-- 安装加载服务
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.dfhm.GlobalConst" name="LOAD_PORT"/>
+		<obj class="com.cambrian.game.ds.LoadCommand">
+			<method name="setDS"><ref id="DS"/></method>
+		</obj>
+	</method> -->
+	<!-- 安装注册服务-->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.dfhm.GlobalConst" name="REG_PORT"/>
+		<obj class="com.cambrian.game.ds.RegistCommand">
+			<method name="setDS"><ref id="DS"/></method>
+		</obj>
+	</method>
+	<!-- 安装退出服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.dfhm.GlobalConst" name="EXIT_PORT"/>
+		<obj class="com.cambrian.game.ds.ExitCommand">
+			<method name="setDS"><ref id="DS"/></method>
+		</obj>
+	</method>
+	
+	<!-- 安装CLL服务(认证登录加载服务) -->
+	<method name="setPort" ref="service">
+		<value>214</value>
+		<obj class="com.cambrian.game.ds.CLLCommand">
+			<method name="setDS"><ref id="DS"/></method>
+			<!-- 设置代理服务端口和连接提供器 -->
+			<method name="setProxy">
+				<field class="com.cambrian.dfhm.GlobalConst" name="CC_CERTIFY_PORT"/>
+				<ref id="cc.cp"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 安装服务器列表代理服务
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="SERVER_LIST_PORT"/>
+		<obj class="zmyth.net.ProxyAccessPort">
+			<method name="setConnectProducer"><ref id="dc.nbcp"/></method>
+			<method name="setPort"><field class="zmyth.net.PortService" name="SERVER_LIST_PORT"/></method>
+		</obj>
+	</method> -->
+	
+	
+	<obj class="com.cambrian.gc.notice.BaseUpdateNotice" id="bun">
+		<method name="setPort">10001</method>
+	</obj>
+	
+	<obj class="com.cambrian.gc.notice.ProUpdateNotice" id="pun">
+		<method name="setPort">10002</method>
+	</obj>
+	
+	<obj class="com.cambrian.gc.notice.CardUpdateNotice" id="cun">
+		<method name="setPort">10003</method>
+	</obj>
+	
+	<obj class="com.cambrian.gc.GameControl" id="GC">
+		<method name="setDS"><ref id="DS"/></method>
+		<method name="setBun"><ref id="bun"/></method>
+		<method name="setPun"><ref id="pun"/></method>
+		<method name="setCun"><ref id="cun"/></method>
+	</obj>
+
+</objects>

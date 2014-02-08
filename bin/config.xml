@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+<!-- ######################################################################################################### -->
+
+	<!-- 数据服务器的认证中心地址 -->
+	<string id="ds_cc_address">tcp://127.0.0.1:20505</string>
+	<!-- 数据服务器的数据中心地址 -->
+	<string id="ds_dc_address">tcp://127.0.0.1:20500</string>
+	<!-- 数据中心TCP接口允许访问的ip -->
+	<strings id="dc_ip_list">192.168.1.*|localhost|127.0.0.1</strings>
+	<!-- 认证中心TCP接口允许访问的ip -->
+	<strings id="cc_ip_list">192.168.*.*|localhost|127.0.0.1</strings>
+	<strings id="certify_keys">1|test</strings>
+
+</objects>

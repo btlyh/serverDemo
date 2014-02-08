@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 创建认证中心管理器 -->
+	<obj class="com.cambrian.game.cc.CertifyCenter" id="CC">
+		<!-- 安装认证中心访问接口 -->
+		<method name="setDBAccess">
+			<obj class="com.cambrian.game.cc.DBAccess" id="access">
+				<!-- TODO数据库访问配置 -->
+				<method name="setConnectionManager"><ref id="mongo"/></method>
+				<method name="setMongoDBPersistence"></method>
+			</obj>
+		</method>
+		<!-- 定时器开始工作 -->
+		<method name="timerStart"/>
+	</obj>
+
+	<!-- ########################################## -->
+	<!-- 安装会话认证服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CC_CERTIFY_PORT"/>
+		<obj class="com.cambrian.game.cc.CertifyCommand">
+			<method name="setCC"><ref id="CC"/></method>
+		</obj>
+	</method>
+	<!-- 安装会话加载服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CC_LOAD_PORT"/>
+		<obj class="com.cambrian.game.cc.LoginCommand">
+			<method name="setCC"><ref id="CC"/></method>
+		</obj>
+	</method>
+	<!-- 安装会话活动服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CC_ACTIVE_PORT"/>
+		<obj class="com.cambrian.game.cc.ActiveCommand">
+			<method name="setCC"><ref id="CC"/></method>
+		</obj>
+	</method>
+	<!-- 安装会话退出服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CC_EXIT_PORT"/>
+		<obj class="com.cambrian.game.cc.ExitCommand">
+			<method name="setCC"><ref id="CC"/></method>
+		</obj>
+	</method>
+	<!-- 安装会话注册服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CC_REGIST_PORT"/>
+		<obj class="com.cambrian.game.cc.RegistCommand">
+			<method name="setCC"><ref id="CC"/></method>
+		</obj>
+	</method>
+	<!-- 安装关闭服务 -->
+	<method name="setPort" ref="service">
+		<field class="com.cambrian.common.net.ProxyDataHandler" name="CC_SHUTDOWN_PORT"/>
+		<obj class="com.cambrian.game.cc.ShutDownCommand">
+			<method name="setCC"><ref id="CC"/></method>
+		</obj>
+	</method>
+</objects>

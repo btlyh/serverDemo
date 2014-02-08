@@ -1,0 +1,72 @@
+配置表规范
+
+支持标签：(忽略大小写)
+	<objects> ：	xml根节点标签，一般无属性，子标签可以是以下任意标签，子节点不支持CDATA。
+	<value> ：		基本类型字段标签，支持type,id属性，不支持子标签，子节点只能是CDATA
+	<array> ：		基本类型数组标签，支持type,id属性，不支持子标签，子节点只能是CDATA
+	<ints> ：		int数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<bytes> ：		byte数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<shorts> ：		short数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<doubles> ：	double数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<longs> ：		long数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<floats> ：		float数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<booleans> ：	boolean数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<chars> ：		char数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<string> ：		string字段标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<strings> ：	string数组标签，支持id属性，不支持子标签，子节点只能是CDATA
+	<obj> ：		引用类型标签，支持class,id属性，支持<field>,<method>子标签，子节点不可以是CDATA
+	<objs> ：		引用类型数组标签，支持class,length,id属性，无结束标签</objs>，格式：<objs class="Object" length="3" id="objArray">
+	<sample> ：		模板对象标签，支持动态属性，属性名称根据具体Sample子类定义！该标签无结束标签</sample>，格式：<sample class="Sample" att1="1"/>
+	<samples> ：	模板数组标签，支持factory属性，该标签内部只能存在<sample>子标签
+	<field> ：		字段引用标签，支持class,ref,name,id,declared属性，其中class和ref属性不可同时使用
+	<method> ：		函数调用标签，支持class,ref,name,id,declared属性，其中class和ref属性不可同时使用
+	<constructor> ：构造函数调用标签，支持class,id,declared属性.
+	<ref> ：		变量引用标签，支持id属性，无结束标签</ref>，格式：<ref id="varId"/>
+
+支持属性：
+	id:			当前标签声明对象在内存中的全局变量标识
+	class:		当前标签引用的java类
+	ref:		当前标签引用的全局加载变量标识
+	name:		表示所引用java类的属性名称
+	type:		基本数据类型
+	length:		数组长度
+	facotry:	模板数组对应的工厂对象引用的变量标识
+	declared:	忽略属性访问权限(TRUE/1：从该类以及超类的所有已经声明属性中查找匹配的属性. FALSE/0：只从指定类以及超类的所有公共访问权限属性中查找匹配的属性)
+
+
+
+基本类型字段：
+	EG:<value type="int" id="array">12</value>
+	type字段指定值类型，可以是 byte,short,int,long,float,double,char,boolean
+
+基本类型字段数组：
+	第一种方式：
+	EG:	<array type="int" id="array">12,13,14</array>
+	type字段指定值类型，可以是 byte,short,int,long,float,double,char,boolean
+
+	第二种方式：
+	EG:	<ints id="array">1,2,3</ints>,<doubles id="array">1.5,2.0,3.7</doubles>....
+
+字符串：
+	EG:	<string id="str">this is string</string>
+
+字符串数组：
+	EG:	<strings id="stringArray">this,is,string,array</strings>
+
+构造函数：
+	EG:	<constructor class="java.lang.Integer" id="int1"><value type="int">124</value></constructor>
+	EG:	<constructor class="java.lang.Integer" id="int2"/>
+
+函数：
+	EG:	<method class="test.PrintKit" name="print"><string>Test text</string></method>
+
+	EG:	<obj class="test.PrintKit" id="printKit"/>
+		<method ref="printKit" name="print">Test text</method>
+
+	EG:	<method ref="printKit" name="getString" id="returnString"/>
+		<method ref="printKit" name="print"><ref id="returnString"/></method>
+
+字段：
+	EG:	<field class="test.People" name="">
+
+
